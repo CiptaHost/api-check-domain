@@ -1,14 +1,14 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/check", "destination": "/check.html" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ],
   "builds": [
     {
       "src": "check.html",
       "use": "@now/static"
     }
-  ],
-  "routes": [
-    { "src": "/check", "dest": "/check.html" },
-    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
